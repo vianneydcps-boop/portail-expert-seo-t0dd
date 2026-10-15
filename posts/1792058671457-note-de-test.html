@@ -3,41 +3,458 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Note de test</title>
+  <title>Note de test | Portail Expert SEO - Conseils &amp; Stratégies</title>
   <meta name="robots" content="index, follow">
+  <meta name="description" content="Note de test - Dossier d'analyse et perspectives par la rédaction de Portail Expert SEO - Conseils &amp; Stratégies.">
   <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      line-height: 1.7;
-      color: #1a1a1a;
-      background: #fafafa;
-      margin: 0;
-      padding: 2rem 1rem;
-    }
-    article {
-      max-width: 760px;
-      margin: 0 auto;
-      background: #ffffff;
-      padding: 2.5rem;
-      border-radius: 12px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-    }
-    h1 { font-size: 2rem; line-height: 1.25; margin-top: 0; margin-bottom: 1.5rem; color: #111; }
-    h2 { font-size: 1.4rem; margin-top: 2rem; margin-bottom: 1rem; color: #222; }
-    h3 { font-size: 1.15rem; margin-top: 1.5rem; color: #333; }
-    p { margin-bottom: 1.2rem; }
-    a { color: #0969da; text-decoration: underline; text-underline-offset: 3px; font-weight: 500; }
-    a:hover { color: #054da7; }
-    footer { margin-top: 3rem; pt: 1rem; border-top: 1px solid #eee; font-size: 0.85rem; color: #777; }
-  </style>
+  :root {
+    --primary: #2563eb;
+    --primary-hover: #1d4ed8;
+    --primary-light: #eff6ff;
+    --accent: #f59e0b;
+    --text: #1e293b;
+    --text-muted: #64748b;
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --radius: 12px;
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --font-serif: Georgia, "Times New Roman", serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: var(--font-sans);
+    line-height: 1.7;
+    color: var(--text);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+  }
+  .site-header {
+    background: #ffffff;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+  }
+  .header-top {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 1.1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  .brand-wrap {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    text-decoration: none;
+    color: inherit;
+  }
+  .brand-badge {
+    width: 38px;
+    height: 38px;
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+    color: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.15rem;
+  }
+  .brand-title {
+    font-family: var(--font-serif);
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.2;
+  }
+  .brand-tagline {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .edition-badge {
+    background: #f1f5f9;
+    color: #334155;
+    padding: 0.25rem 0.65rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+  .nav-bar {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+  }
+  .nav-bar::-webkit-scrollbar { display: none; }
+  .nav-link {
+    display: inline-block;
+    padding: 0.8rem 1rem;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: #475569;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.15s ease;
+  }
+  .nav-link:hover {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+  }
+  .nav-link.active {
+    color: var(--primary);
+    font-weight: 600;
+    border-bottom-color: var(--primary);
+  }
+  .breadcrumbs-wrap {
+    max-width: 860px;
+    margin: 1.5rem auto 0;
+    padding: 0 1.5rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .breadcrumbs-wrap a {
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+  .breadcrumbs-wrap a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+  }
+  .main-wrap {
+    max-width: 860px;
+    margin: 1.5rem auto 4rem;
+    padding: 0 1.5rem;
+  }
+  .article-card {
+    background: var(--card);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    padding: 3rem 2.5rem;
+    box-shadow: 0 4px 25px -5px rgba(0,0,0,0.04);
+  }
+  @media (max-width: 640px) {
+    .article-card { padding: 1.75rem 1.25rem; }
+    .header-top { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+  }
+  .article-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.85rem;
+    margin-bottom: 1.25rem;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+  }
+  .category-badge {
+    background: var(--primary-light);
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border: 1px solid #dbeafe;
+  }
+  .article-card h1 {
+    font-family: var(--font-serif);
+    font-size: 2.35rem;
+    line-height: 1.25;
+    color: #0f172a;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+  }
+  @media (max-width: 640px) {
+    .article-card h1 { font-size: 1.75rem; }
+  }
+  .author-banner {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    padding: 0.85rem 0;
+    border-top: 1px solid #f1f5f9;
+    border-bottom: 1px solid #f1f5f9;
+    margin-bottom: 2rem;
+  }
+  .author-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #475569;
+    font-size: 0.9rem;
+  }
+  .author-name {
+    font-weight: 600;
+    color: #0f172a;
+    font-size: 0.88rem;
+  }
+  .author-role {
+    color: var(--text-muted);
+    font-size: 0.78rem;
+  }
+  .article-body {
+    color: #334155;
+    font-size: 1.05rem;
+    line-height: 1.85;
+  }
+  .article-body h2 {
+    font-family: var(--font-serif);
+    font-size: 1.55rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #f1f5f9;
+  }
+  .article-body h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  .article-body p {
+    margin-bottom: 1.35rem;
+  }
+  .article-body ul, .article-body ol {
+    margin: 1.2rem 0;
+    padding-left: 1.75rem;
+  }
+  .article-body li {
+    margin-bottom: 0.5rem;
+  }
+  .article-body blockquote {
+    margin: 1.5rem 0;
+    padding: 1rem 1.5rem;
+    background: #f8fafc;
+    border-left: 4px solid var(--primary);
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+    color: #475569;
+  }
+  .article-body a {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color 0.15s ease;
+  }
+  .article-body a:hover {
+    color: var(--primary-hover);
+  }
+  .bio-card {
+    margin-top: 3.5rem;
+    padding: 1.75rem;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+  }
+  .bio-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    color: #0f172a;
+  }
+  .bio-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+  .tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  .tag-pill {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    color: #475569;
+    font-weight: 500;
+  }
+  .site-footer {
+    background: #ffffff;
+    border-top: 1px solid var(--border);
+    padding: 3rem 1.5rem 2rem;
+    margin-top: 4rem;
+  }
+  .footer-inner {
+    max-width: 1040px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+  .footer-col h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .footer-col p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+  .footer-links {
+    list-style: none;
+    padding: 0;
+  }
+  .footer-links li {
+    margin-bottom: 0.6rem;
+  }
+  .footer-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.15s ease;
+  }
+  .footer-links a:hover {
+    color: var(--primary);
+  }
+  .footer-bottom {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid #f1f5f9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+</style>
 </head>
 <body>
-  <article>
-    <h1>Note de test</h1>
-    <h2>Note de test</h2><p>Ce billet vérifie le bon fonctionnement de la publication. Il contient un lien vers <a href="https://example.org/">une ressource de référence</a> afin de contrôler la façon dont le lien est rendu sur cette plateforme.</p><p>Ce contenu peut être supprimé sans conséquence.</p>
-    <footer>
-      <p>Publié le 15 octobre 2026</p>
-    </footer>
-  </article>
+  <header class="site-header">
+    <div class="header-top">
+      <a href="https://vianneydcps-boop.github.io/portail-expert-seo-t0dd/" class="brand-wrap">
+        <div class="brand-badge">P</div>
+        <div>
+          <div class="brand-title">Portail Expert SEO - Conseils &amp; Stratégies</div>
+          <div class="brand-tagline">Revue Numérique & Analyses Indépendantes</div>
+        </div>
+      </a>
+      <div class="header-meta">
+        <span class="edition-badge">Édition Web • Accès Libre</span>
+      </div>
+    </div>
+    <nav class="nav-bar">
+      <a href="https://vianneydcps-boop.github.io/portail-expert-seo-t0dd/" class="nav-link">Accueil</a>
+      <a href="https://vianneydcps-boop.github.io/portail-expert-seo-t0dd/#seo" class="nav-link ">Stratégies SEO</a>
+      <a href="https://vianneydcps-boop.github.io/portail-expert-seo-t0dd/#digital" class="nav-link ">Tech & Digital</a>
+      <a href="https://vianneydcps-boop.github.io/portail-expert-seo-t0dd/#business" class="nav-link ">Économie & Business</a>
+      <a href="https://vianneydcps-boop.github.io/portail-expert-seo-t0dd/#tendances" class="nav-link active">Tendances Web</a>
+      <a href="https://vianneydcps-boop.github.io/portail-expert-seo-t0dd/#guides" class="nav-link ">Guides Pratiques</a>
+      <a href="https://vianneydcps-boop.github.io/portail-expert-seo-t0dd/#a-propos" class="nav-link">À Propos</a>
+    </nav>
+  </header>
+
+  <div class="breadcrumbs-wrap">
+    <a href="https://vianneydcps-boop.github.io/portail-expert-seo-t0dd/">Accueil</a>
+    <span class="breadcrumbs-separator">›</span>
+    <span>Analyses &amp; Tendances</span>
+    <span class="breadcrumbs-separator">›</span>
+    <span style="color: #0f172a; font-weight: 500;">Dossier</span>
+  </div>
+
+  <main class="main-wrap">
+    <article class="article-card">
+      <div class="article-meta">
+        <span class="category-badge">Analyses &amp; Tendances</span>
+        <span class="meta-item">📅 Publié le 15 octobre 2026</span>
+        <span class="meta-item">⏱️ 3 min de lecture</span>
+        <span class="meta-item">✔️ Dossier vérifié</span>
+      </div>
+
+      <h1>Note de test</h1>
+
+      <div class="author-banner">
+        <div class="author-avatar">P</div>
+        <div class="author-info">
+          <div class="author-name">Par La Rédaction Éditoriale</div>
+          <div class="author-role">Pôle Veille, Référencement & Stratégies Digitales</div>
+        </div>
+      </div>
+
+      <div class="article-body">
+        <h2>Note de test</h2><p>Ce billet vérifie le bon fonctionnement de la publication. Il contient un lien vers <a href="https://example.org/">une ressource de référence</a> afin de contrôler la façon dont le lien est rendu sur cette plateforme.</p><p>Ce contenu peut être supprimé sans conséquence.</p>
+      </div>
+
+      <div class="bio-card">
+        <div class="bio-title">À propos de cette publication</div>
+        <div class="bio-desc">
+          Ce dossier s'inscrit dans notre programme d'information et d'analyse des mutations technologiques et du web marketing. Nos rédacteurs étudient les meilleures pratiques pour renforcer la visibilité en ligne et la pertinence sémantique des entreprises.
+        </div>
+        <div class="tags-list">
+          <span class="tag-pill">#Référencement</span>
+          <span class="tag-pill">#SEO</span>
+          <span class="tag-pill">#Netlinking</span>
+          <span class="tag-pill">#StratégieDigitale</span>
+          <span class="tag-pill">#Google</span>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer" id="a-propos">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>Portail Expert SEO - Conseils &amp; Stratégies</h4>
+        <p>Revue d'information et dossiers d'analyse indépendants. Notre rédaction décrypte les dynamiques du numérique, l'acquisition d'audience et les innovations technologiques.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Rubriques Éditoriales</h4>
+        <ul class="footer-links">
+          <li><a href="https://vianneydcps-boop.github.io/portail-expert-seo-t0dd/#seo">Stratégies SEO & Référencement</a></li>
+          <li><a href="https://vianneydcps-boop.github.io/portail-expert-seo-t0dd/#digital">Technologies & Outils Numériques</a></li>
+          <li><a href="https://vianneydcps-boop.github.io/portail-expert-seo-t0dd/#business">Économie & Gestion d'Entreprise</a></li>
+          <li><a href="https://vianneydcps-boop.github.io/portail-expert-seo-t0dd/#guides">Guides & Tutoriels Pratiques</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Informations</h4>
+        <ul class="footer-links">
+          <li><a href="https://vianneydcps-boop.github.io/portail-expert-seo-t0dd/">Page d'accueil</a></li>
+          <li><a href="https://vianneydcps-boop.github.io/portail-expert-seo-t0dd/#a-propos">Charte éditoriale</a></li>
+          <li><a href="https://vianneydcps-boop.github.io/portail-expert-seo-t0dd/#a-propos">Indexation Googlebot & Flux</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Portail Expert SEO - Conseils &amp; Stratégies — Tous droits réservés.</div>
+      <div>Hébergement haute disponibilité • 100% Dofollow Pur garanti</div>
+    </div>
+  </footer>
 </body>
 </html>
