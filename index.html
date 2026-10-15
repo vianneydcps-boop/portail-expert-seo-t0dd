@@ -3,28 +3,32 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portail Expert SEO - Conseils &amp; Stratégies | Portail Éditorial & Dossiers</title>
+  <title>Portail Expert SEO - Conseils &amp; Stratégies | Portail Éditorial &amp; Dossiers</title>
   <meta name="robots" content="index, follow">
-  <meta name="description" content="Portail dédié aux stratégies de référencement naturel, netlinking et audit SEO.">
+  <meta name="description" content="Portail Expert Référencement &amp; Notoriété Digitale">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%2064%2064%22%20width%3D%2264%22%20height%3D%2264%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22g%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%234338ca%22%2F%3E%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%23ec4899%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpolygon%20points%3D%2232%2C4%2060%2C32%2032%2C60%204%2C32%22%20fill%3D%22%234338ca%22%20stroke%3D%22%23ec4899%22%20stroke-width%3D%222.5%22%2F%3E%3Ctext%20x%3D%2232%22%20y%3D%2241%22%20font-family%3D%22-apple-system%2CBlinkMacSystemFont%2CSegoe%20UI%2CRoboto%2Csans-serif%22%20font-size%3D%2228%22%20font-weight%3D%22900%22%20fill%3D%22%23ffffff%22%20text-anchor%3D%22middle%22%20dominant-baseline%3D%22central%22%3EP%3C%2Ftext%3E%3C%2Fsvg%3E">
   <style>
   :root {
-    --primary: #2563eb;
-    --primary-hover: #1d4ed8;
-    --primary-light: #eff6ff;
-    --accent: #f59e0b;
+    --primary: #4338ca;
+    --primary-hover: #3730a3;
+    --primary-light: #eef2ff;
+    --accent: #ec4899;
+    --badge-bg: #312e81;
+    --badge-gradient: linear-gradient(135deg, #312e81, #1e1b4b);
+    --hero-gradient: linear-gradient(135deg, #1e1b4b, #312e81);
     --text: #1e293b;
     --text-muted: #64748b;
     --bg: #f8fafc;
     --card: #ffffff;
     --border: #e2e8f0;
     --radius: 12px;
-    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-    --font-serif: Georgia, "Times New Roman", serif;
+    --font-sans: 'Segoe UI', Roboto, sans-serif;
+    --font-serif: 'Palatino Linotype', Palatino, serif;
   }
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     font-family: var(--font-sans);
-    line-height: 1.7;
+    line-height: 1.75;
     color: var(--text);
     background: var(--bg);
     -webkit-font-smoothing: antialiased;
@@ -54,16 +58,17 @@
     color: inherit;
   }
   .brand-badge {
-    width: 38px;
-    height: 38px;
-    background: linear-gradient(135deg, #1e293b, #0f172a);
+    width: 40px;
+    height: 40px;
+    background: var(--badge-gradient);
     color: #ffffff;
-    border-radius: 8px;
+    border-radius: 9px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 800;
     font-size: 1.15rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
   }
   .brand-title {
     font-family: var(--font-serif);
@@ -79,8 +84,8 @@
     letter-spacing: 0.5px;
   }
   .edition-badge {
-    background: #f1f5f9;
-    color: #334155;
+    background: var(--primary-light);
+    color: var(--primary);
     padding: 0.25rem 0.65rem;
     border-radius: 9999px;
     font-size: 0.75rem;
@@ -115,187 +120,6 @@
     color: var(--primary);
     font-weight: 600;
     border-bottom-color: var(--primary);
-  }
-  .breadcrumbs-wrap {
-    max-width: 860px;
-    margin: 1.5rem auto 0;
-    padding: 0 1.5rem;
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-  }
-  .breadcrumbs-wrap a {
-    color: var(--text-muted);
-    text-decoration: none;
-  }
-  .breadcrumbs-wrap a:hover {
-    color: var(--primary);
-    text-decoration: underline;
-  }
-  .main-wrap {
-    max-width: 860px;
-    margin: 1.5rem auto 4rem;
-    padding: 0 1.5rem;
-  }
-  .article-card {
-    background: var(--card);
-    border-radius: var(--radius);
-    border: 1px solid var(--border);
-    padding: 3rem 2.5rem;
-    box-shadow: 0 4px 25px -5px rgba(0,0,0,0.04);
-  }
-  @media (max-width: 640px) {
-    .article-card { padding: 1.75rem 1.25rem; }
-    .header-top { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
-  }
-  .article-meta {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 0.85rem;
-    margin-bottom: 1.25rem;
-    font-size: 0.82rem;
-    color: var(--text-muted);
-  }
-  .category-badge {
-    background: var(--primary-light);
-    color: var(--primary);
-    font-weight: 700;
-    font-size: 0.75rem;
-    padding: 0.25rem 0.75rem;
-    border-radius: 9999px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    border: 1px solid #dbeafe;
-  }
-  .article-card h1 {
-    font-family: var(--font-serif);
-    font-size: 2.35rem;
-    line-height: 1.25;
-    color: #0f172a;
-    margin-bottom: 1.5rem;
-    font-weight: 800;
-    letter-spacing: -0.5px;
-  }
-  @media (max-width: 640px) {
-    .article-card h1 { font-size: 1.75rem; }
-  }
-  .author-banner {
-    display: flex;
-    align-items: center;
-    gap: 0.85rem;
-    padding: 0.85rem 0;
-    border-top: 1px solid #f1f5f9;
-    border-bottom: 1px solid #f1f5f9;
-    margin-bottom: 2rem;
-  }
-  .author-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #e2e8f0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    color: #475569;
-    font-size: 0.9rem;
-  }
-  .author-name {
-    font-weight: 600;
-    color: #0f172a;
-    font-size: 0.88rem;
-  }
-  .author-role {
-    color: var(--text-muted);
-    font-size: 0.78rem;
-  }
-  .article-body {
-    color: #334155;
-    font-size: 1.05rem;
-    line-height: 1.85;
-  }
-  .article-body h2 {
-    font-family: var(--font-serif);
-    font-size: 1.55rem;
-    font-weight: 700;
-    color: #0f172a;
-    margin-top: 2.5rem;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid #f1f5f9;
-  }
-  .article-body h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #1e293b;
-    margin-top: 2rem;
-    margin-bottom: 0.75rem;
-  }
-  .article-body p {
-    margin-bottom: 1.35rem;
-  }
-  .article-body ul, .article-body ol {
-    margin: 1.2rem 0;
-    padding-left: 1.75rem;
-  }
-  .article-body li {
-    margin-bottom: 0.5rem;
-  }
-  .article-body blockquote {
-    margin: 1.5rem 0;
-    padding: 1rem 1.5rem;
-    background: #f8fafc;
-    border-left: 4px solid var(--primary);
-    border-radius: 0 8px 8px 0;
-    font-style: italic;
-    color: #475569;
-  }
-  .article-body a {
-    color: var(--primary);
-    font-weight: 600;
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    transition: color 0.15s ease;
-  }
-  .article-body a:hover {
-    color: var(--primary-hover);
-  }
-  .bio-card {
-    margin-top: 3.5rem;
-    padding: 1.75rem;
-    background: #f8fafc;
-    border-radius: 12px;
-    border: 1px solid var(--border);
-  }
-  .bio-title {
-    font-weight: 700;
-    font-size: 0.95rem;
-    margin-bottom: 0.5rem;
-    color: #0f172a;
-  }
-  .bio-desc {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    line-height: 1.6;
-  }
-  .tags-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-top: 1rem;
-  }
-  .tag-pill {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    padding: 0.2rem 0.6rem;
-    border-radius: 6px;
-    font-size: 0.75rem;
-    color: #475569;
-    font-weight: 500;
   }
   .site-footer {
     background: #ffffff;
@@ -353,7 +177,7 @@
     font-size: 0.8rem;
     color: var(--text-muted);
   }
-</style>
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -362,35 +186,41 @@
         <div class="brand-badge">P</div>
         <div>
           <div class="brand-title">Portail Expert SEO - Conseils &amp; Stratégies</div>
-          <div class="brand-tagline">Revue Numérique & Analyses Indépendantes</div>
+          <div class="brand-tagline">Portail Expert Référencement &amp; Notoriété Digitale</div>
         </div>
       </a>
       <div class="header-meta">
-        <span class="edition-badge">Édition Web • Accès Libre</span>
+        <span class="edition-badge">Revue Spécialisée Search</span>
       </div>
     </div>
     <nav class="nav-bar">
       <a href="./" class="nav-link active">Accueil</a>
-      <a href="#seo" class="nav-link">Stratégies SEO</a>
-      <a href="#digital" class="nav-link">Tech & Digital</a>
-      <a href="#business" class="nav-link">Économie & Business</a>
-      <a href="#tendances" class="nav-link">Tendances Web</a>
-      <a href="#guides" class="nav-link">Guides Pratiques</a>
+      
+        <a href="#audits-techniques" class="nav-link">Audits &amp; Facteurs On-Page</a>
+      
+        <a href="#netlinking-autorite" class="nav-link">Netlinking &amp; Autorité</a>
+      
+        <a href="#google-search" class="nav-link">Google Search &amp; Mises à Jour</a>
+      
+        <a href="#seo-local" class="nav-link">SEO Local &amp; Visibilité</a>
+      
+        <a href="#retours-terrain" class="nav-link">Analyses de Positionnement</a>
+      
       <a href="#a-propos" class="nav-link">À Propos</a>
     </nav>
   </header>
 
   <main style="max-width: 1040px; margin: 2rem auto 4rem; padding: 0 1.5rem;">
-    <!-- Hero Banner -->
-    <div style="background: linear-gradient(135deg, #0f172a, #1e293b); color: #ffffff; border-radius: 16px; padding: 3rem 2.5rem; margin-bottom: 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
-      <span style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 0.3rem 0.8rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Portail d'actualités et dossiers</span>
-      <h1 style="font-family: Georgia, serif; font-size: 2.5rem; font-weight: 800; line-height: 1.2; margin: 1rem 0 0.75rem;">Portail Expert SEO - Conseils &amp; Stratégies</h1>
-      <p style="color: #cbd5e1; font-size: 1.1rem; max-width: 680px; line-height: 1.6;">Portail dédié aux stratégies de référencement naturel, netlinking et audit SEO.</p>
+    <!-- Hero Banner avec Dégradé Thématique -->
+    <div style="background: var(--hero-gradient); color: #ffffff; border-radius: 16px; padding: 3rem 2.5rem; margin-bottom: 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.08);">
+      <span style="background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); padding: 0.3rem 0.8rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Revue Spécialisée Search</span>
+      <h1 style="font-family: var(--font-serif); font-size: 2.5rem; font-weight: 800; line-height: 1.2; margin: 1rem 0 0.75rem;">Portail Expert SEO - Conseils &amp; Stratégies</h1>
+      <p style="color: #cbd5e1; font-size: 1.1rem; max-width: 680px; line-height: 1.6;">Portail Expert Référencement &amp; Notoriété Digitale</p>
     </div>
 
     <!-- Section Title -->
     <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem;">
-      <h2 style="font-family: Georgia, serif; font-size: 1.6rem; color: #0f172a; font-weight: 700;">Dernières publications & analyses</h2>
+      <h2 style="font-family: var(--font-serif); font-size: 1.6rem; color: #0f172a; font-weight: 700;">Dernières publications &amp; analyses</h2>
       <span style="font-size: 0.85rem; color: #64748b;">1 dossier(s) en ligne</span>
     </div>
 
@@ -399,16 +229,16 @@
           <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
             <div>
               <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
-                <span style="background: #eff6ff; color: #2563eb; font-size: 0.72rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 9999px; text-transform: uppercase;">Analyses &amp; Tendances</span>
-                <span style="font-size: 0.75rem; color: #94a3b8;">15 octobre 2026</span>
+                <span style="background: var(--primary-light); color: var(--primary); font-size: 0.72rem; font-weight: 700; padding: 0.2rem 0.6rem; border-radius: 9999px; text-transform: uppercase;">Audits &amp; Facteurs On-Page</span>
+                <span style="font-size: 0.75rem; color: #94a3b8;">Archive</span>
               </div>
-              <h3 style="font-family: Georgia, serif; font-size: 1.15rem; line-height: 1.35; margin-bottom: 0.75rem;">
+              <h3 style="font-family: var(--font-serif); font-size: 1.15rem; line-height: 1.35; margin-bottom: 0.75rem;">
                 <a href="posts/1792058671457-note-de-test.html" style="color: #0f172a; text-decoration: none; font-weight: 700;">Note de test</a>
               </h3>
             </div>
             <div style="margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid #f1f5f9; display: flex; justify-content: space-between; align-items: center;">
               <span style="font-size: 0.78rem; color: #64748b;">Par La Rédaction</span>
-              <a href="posts/1792058671457-note-de-test.html" style="color: #2563eb; font-weight: 600; font-size: 0.85rem; text-decoration: none;">Lire le dossier →</a>
+              <a href="posts/1792058671457-note-de-test.html" style="color: var(--primary); font-weight: 600; font-size: 0.85rem; text-decoration: none;">Lire le dossier →</a>
             </div>
           </div>
       </div>
@@ -418,15 +248,22 @@
     <div class="footer-inner">
       <div class="footer-col">
         <h4>Portail Expert SEO - Conseils &amp; Stratégies</h4>
-        <p>Portail dédié aux stratégies de référencement naturel, netlinking et audit SEO.</p>
+        <p>Portail Expert Référencement &amp; Notoriété Digitale. Publication éditoriale indépendante dédiée aux professionnels, décideurs et experts.</p>
       </div>
       <div class="footer-col">
         <h4>Rubriques</h4>
         <ul class="footer-links">
-          <li><a href="#seo">Stratégies SEO & Référencement</a></li>
-          <li><a href="#digital">Technologies & Outils Numériques</a></li>
-          <li><a href="#business">Économie & Gestion d'Entreprise</a></li>
-          <li><a href="#guides">Guides & Tutoriels Pratiques</a></li>
+          
+            <li><a href="#audits-techniques">Audits &amp; Facteurs On-Page</a></li>
+          
+            <li><a href="#netlinking-autorite">Netlinking &amp; Autorité</a></li>
+          
+            <li><a href="#google-search">Google Search &amp; Mises à Jour</a></li>
+          
+            <li><a href="#seo-local">SEO Local &amp; Visibilité</a></li>
+          
+            <li><a href="#retours-terrain">Analyses de Positionnement</a></li>
+          
         </ul>
       </div>
       <div class="footer-col">
